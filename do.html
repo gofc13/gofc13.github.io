@@ -29,7 +29,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Map.html">지도로 찾기</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="geo.html#">지역별 찾기</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jang.html#">장르별 찾기</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="movie.html#">연도별 찾기</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="movie.html#">영화별 찾기</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,14 +84,24 @@
 	 var contentString = [
                      '<div class="iw_inner">',
                      '   <h4>드라마 [도깨비] 촬영지</h4>',
-                     '   <p>모두가 아는 그 유명한 빨간 등대!!<br />',
-                     '      촬영지: 강원도 강릉시 주문진읍 교항리 81-151',
-                     '      <img src="'+ HOME_PATH +'/assets/img/4.jpg" width="55" height="55" class="thumb" /><br />',
+                     '   <p>김신(공유)이 메밀꽃이 가득한 메밀밭 속 벤치에서 사색에 잠기던 그 곳!<br />',
+                     '      촬영지 : 전북 고창군 공음면 선동리',
+                     '      <img src="'+ HOME_PATH +'/assets/img/도깨비_메밀밭.png" width="100" height="100" class="thumb" /><br />',
                      '   </p>',
                      '</div>'
                      ].join('');
+					 
                         var infowindow = new naver.maps.InfoWindow({
-                           content: contentString
+                           content: contentString,
+						     maxWidth: 500,
+							backgroundColor: "#eee",
+							borderColor: color = "Black",
+							borderWidth: 3,
+							anchorSize: new naver.maps.Size(20, 20),
+							anchorSkew: true,
+							anchorColor: "#eee",
+
+							pixelOffset: new naver.maps.Point(20, -20)
                         });
                      naver.maps.Event.addListener(marker, "click", function(e) {
                         if (infowindow.getMap()) {
