@@ -67,7 +67,20 @@
                         map: map,
                         position: 도깨비
                      });
-                     var contentString = [
+
+ var cityhall1 = new naver.maps.LatLng(37.881322, 128.832643);
+
+    var marker1 = new naver.maps.Marker({
+        map: map,
+        position: cityhall1
+    });
+	var cityhall2 = new naver.maps.LatLng(34.979685, 126.600952);
+
+    var marker2 = new naver.maps.Marker({
+        map: map,
+        position: cityhall2
+    });
+	                      var contentString = [
                      '<div class="iw_inner">',
                      '   <h4>드라마 [도깨비] 촬영지</h4>',
                      '   <p>모두가 아는 그 유명한 빨간 등대!!<br />',
@@ -90,19 +103,6 @@
 					</script>
 					<section class="projects-section bg-light" id="projects">
                     
- var cityhall1 = new naver.maps.LatLng(37.881322, 128.832643);
-
-    var marker1 = new naver.maps.Marker({
-        map: map,
-        position: cityhall1
-    });
-	var cityhall2 = new naver.maps.LatLng(34.979685, 126.600952);
-
-    var marker2 = new naver.maps.Marker({
-        map: map,
-        position: cityhall2
-    });
-	 
             <div class="container">
                 <!-- Featured Project Row-->
 				<center><h2>촬영지</h2></center>
