@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>지도로 찾기</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=00kbaeq9re"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+	<body id="page-top">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html">촬영지길잡이</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Map.html">지도로 찾기</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="geo.html#">지역별 찾기</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="jang.html#">장르별 찾기</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="movie.html#">영화별 찾기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<section class="about-section text-center" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<h2 class="text-white mb-4">지도로 찾기</h2>
+	<!-- 텍스트
+							<p class="text-white-50">
+								Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+								<a href="https://startbootstrap.com/theme/grayscale/">the preview page</a>
+								. The theme is open source, and you can use it for any purpose, personal or commercial.
+							</p>
+	-->
+						</div>
+					</div>
+	<!-- 이미지
+					<img class="img-fluid" src="assets/img/ipad.png" alt="" />
+	-->
+				</div>
+	<!--지도-->
+				<div id="map" style="width:50%;height:600px;margin:0 auto;text-align=center"></div>
+					<script>
+						 var map = new naver.maps.Map('map',{
+								center: new naver.maps.LatLng(37.000000, 127.100000),
+								zoom: 10
+							});
+
+							var marker = new naver.maps.Marker({
+								position: new naver.maps.LatLng(37.000000, 127.000000),
+								map: map
+							});
+					</script>
+		</section>
+	</body>
+</html>	
