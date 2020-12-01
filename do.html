@@ -71,7 +71,7 @@
                     
  var cityhall1 = new naver.maps.LatLng(37.881322, 128.832643);
 
-    var marker = new naver.maps.Marker({
+    var marker1 = new naver.maps.Marker({
         map: map,
         position: cityhall1
     });
@@ -93,14 +93,14 @@
                         var infowindow = new naver.maps.InfoWindow({
                            content: contentString
                         });
-                     naver.maps.Event.addListener(marker, "click", function(e) {
+                     naver.maps.Event.addListener(marker1, "click", function(e) {
                         if (infowindow.getMap()) {
                            infowindow.close();
                         } else {
-                           infowindow.open(map, marker);
+                           infowindow.open(map, marker1);
                         }
                      });
-                     infowindow.close(map, marker);
+                     infowindow.close(map, marker1);
 					</script>
 					<section class="projects-section bg-light" id="projects">
             <div class="container">
